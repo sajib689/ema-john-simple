@@ -13,8 +13,9 @@ const Product = ({product}) => {
             <h5>Price: ${price}</h5>
             <h6>Manufacturer: {seller}</h6>
             <p>Rating: {ratings}</p>
-            <button className='cart-btn'>Add To Cart</button>
+            
         </div>
+        <button className='cart-btn'>Add To Cart</button>
         </div>
     );
 };
