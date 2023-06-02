@@ -1,0 +1,39 @@
+.banner_container{
+    padding-left: 140px;
+    padding-right: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner_title p{
+    color: #FF9900;
+    font-size: 17px;
+    font-family: 'Lato';
+}
+.banner_title h1{
+    font-family: 'Lato';
+    font-size: 50px;
+    letter-spacing: -0.015em;
+    color: #1C2B35;
+}
+.banner_title h5{
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.0025em;
+    color: #2A414F;
+}
+.banner_title .btn{
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 14px;
+    color: #0E161A;
+    background: #FF9900;
+    border-radius: 4px;
+}
+.banner_img img{
+    margin: 20px;
+    width: 451px;
+    height: 530px;
+    border-radius: 8px;
+}
