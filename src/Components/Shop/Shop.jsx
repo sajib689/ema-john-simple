@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Shop.css'
 import Product from '../Product/Product';
+import Cart from '../Cart/Cart';
 const Shop = () => {
     const [products, setProducts] = useState([])
     const [cart, setCart] = useState([])
@@ -10,7 +11,7 @@ const Shop = () => {
         .then(data => setProducts(data))
     },[])
     const handClick = (product) => {
-        console.log( product)
+        // console.log( product)
         const newCart = [...cart, product]
         setCart(newCart)
     }
@@ -28,14 +29,7 @@ const Shop = () => {
             }
             </div>
             <div className="cart-container">
-                <h2 className='order-title'>Order Summary</h2>
-                <div className="order-container">
-                    <h5>Selected Items: {cart.length}</h5>
-                    <h5>Total Price: $</h5>
-                    <h5>Total Shipping Charge: $</h5>
-                    <h5>Tax: $</h5>
-                    <h4>Grand Total: $</h4>
-                </div>
+                <Cart cart={cart}></Cart>
             </div>
         </div>
     );
