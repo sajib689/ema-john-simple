@@ -12,7 +12,7 @@ const Shop = () => {
     const handClick = (product) => {
         console.log( product)
         const newCart = [...cart, product]
-        setCart(newCart)
+        setCart(newCart * cart.length)
     }
     return (
         <div className='shop-container'>
@@ -29,7 +29,13 @@ const Shop = () => {
             </div>
             <div className="cart-container">
                 <h2 className='order-title'>Order Summary</h2>
-                <p>{cart.length}</p>
+                <div className="order-container">
+                    <h5>Selected Items: {cart.length}</h5>
+                    <h5>Total Price: ${cart.price}</h5>
+                    <h5>Total Shipping Charge: $</h5>
+                    <h5>Tax: $</h5>
+                    <h4>Grand Total: $</h4>
+                </div>
             </div>
         </div>
     );
