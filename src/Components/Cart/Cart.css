@@ -10,3 +10,26 @@
 .order-container{
     margin-left: 17px;
 }
+.cart{
+    position: sticky;
+    top: 0;
+}
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.clearBtn {
+    background: #FF3030;
+    font-size: 15px;
+    border-radius: 4px;
+    color: #FFFFFF;
+}
+.reviewBtn{
+    margin-top: 10px;
+    background: #FF9900;
+    font-size: 15px;
+    border-radius: 4px;
+    color: #FFFFFF;
+}
