@@ -5,16 +5,14 @@ const Cart = ({cart}) => {
     const {price} = cart;
     let total = 0
     let charge = 0
-    let allCount = 0
     for (const product of cart){
        total = total + product.price
        charge = charge + product.shipping
     }
     const tax = total * 0.1
     const tax2 = tax.toFixed(2)
-    const grandTotal = total + charge + parseInt(tax2)
-    
-    return (
+    const grandTotal = total + charge + parseFloat(tax2)
+   return (
         <div className='cart'>
             <h2 className='order-title'>Order Summary</h2>
                 <div className="order-container">
