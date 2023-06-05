@@ -1,8 +1,9 @@
 import React from 'react';
 import './Cart.css'
+import { deleteShoppingCart } from '../../utilities/fakedb';
 const Cart = ({cart}) => {
     console.log(cart)
-    const {price} = cart;
+    const {price, id} = cart;
     let total = 0
     let charge = 0
     for (const product of cart){
@@ -12,6 +13,7 @@ const Cart = ({cart}) => {
     const tax = total * 0.1
     const tax2 = tax.toFixed(2)
     const grandTotal = total + charge + parseFloat(tax2)
+   
    return (
         <div className='cart'>
             <h2 className='order-title'>Order Summary</h2>
@@ -23,7 +25,7 @@ const Cart = ({cart}) => {
                     <h4>Grand Total: ${grandTotal}</h4>
                 </div>
               <div className="btn-container">
-                <><button className='clearBtn'>Clear Cart</button></>
+                <><button className='clearBtn' onClick={deleteShoppingCart}>Clear Cart</button></>
               <><button className='reviewBtn'>Review Order</button></>
                 
               </div>
