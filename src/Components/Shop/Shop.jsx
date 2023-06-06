@@ -16,7 +16,9 @@ const Shop = () => {
         const storeCart = getShoppingCart
         for (const id in storeCart) {
             const addedProduct = products.find(product => product.id === id)
-            console.log(addedProduct)
+            if (addedProduct){
+                console.log(addedProduct)
+            }
         }
     },[products])
     const handClick = (product) => {
