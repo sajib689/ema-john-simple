@@ -2,7 +2,7 @@ import React from 'react';
 import './Cart.css'
 import { deleteShoppingCart } from '../../utilities/fakedb';
 const Cart = ({cart}) => {
-    console.log(cart)
+    // console.log(cart)
     const {price, id} = cart;
     let total = 0
     let charge = 0
