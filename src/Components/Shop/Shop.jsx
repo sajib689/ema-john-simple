@@ -18,7 +18,7 @@ const Shop = () => {
             const addedProduct = products.find(product => product.id === id)
             console.log(addedProduct)
         }
-    },[])
+    },[products])
     const handClick = (product) => {
         // console.log( product)
         const newCart = [...cart, product]
